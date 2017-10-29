@@ -1,0 +1,82 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+\usepackage{mhchem}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+železná deska s magnetickými stojánky, \ce{He}-\ce{Ne} laser ($"633 nm"$, $"5 mW"$), 2 zrcadla na
+stojánku, optická lavice s jezdci, 2 spojky ($+50$, $+200$), rozptylka ($−100$), sada kruhových otvorů,
+nastavitelná štěrbina s mikrometrickým šroubem, stojan na mřížku, optická mřížka, stínítko na
+zdi, stínítko, držák na stínítko a kruhové otvory, pásmové měřidlo ($5 m$), pravítko $"20 cm"$ a $"30 cm"$,
+měřicí mikroskop, Abbeho kostka, rovinné zrcadlo s mikrometrickým šroubem, rovinné zrcadlo,
+provázek.
+
+\section{Postup merania}
+\begin{enumerate}
+\item Najskôr bol laserový zväzok pomocou kreplerového ďalekohľadu fokusovaný
+\item do dráhy bolo umiestnené tienikom s difrakčnou dierkou
+\item pomocou dvoch zrkadiel bol zväzok predlžený a nasmerovaný na stenu
+\item pre jednotlivé diery boli obkreslené polohy maxím na papier
+\item tienitko s dierami bolo vymenené za mriežku, zväzok bol opäť predlžený a difrakčné obrazce pre 10 rôznych otvorení obkreslené a odčítaná a zaznamená veľkosť diery mikrometrickým šróbom.
+\item štrbina bola vymenená za mriežku, zväzok v tomto prípade nebolo potrebné predlžovať a na papier bola zaznamená poloha 0 a 1 maxima.
+\item aparatúra bola rozobratá a na optickej lavici bol zostavený Michelsonův interferometr
+\item Pomocou interferometru bola nameraná vlnová dĺžka laseru
+\item po nameraní boli všetky obrazce premerané a určene jednotlivé vzdialenosti maxím.
+\end{enumerate}
+
+\input{vysl.tex}
+
+\section{Diskusia}
+Obecne najväčším probémom v pri tomto meraní boli otrasy zeme spôsobné ostatnými ľuďmi v miestnosti ale aj prechádzajúcimi tramvajámi a autami po ceste vedľa budovy.
+Tieto otrasy spôsobovali najväčšie problém pri interferometre kde nebolo možné rozlíšiť otrasy od pohybu. Tento fakt je premietnutý aj do chyby počtu maxím v tabuľke \ref{T_4}.
+
+Pri ostatných úlohách otrasy nevadili natoľko aby sme ich chybu museli zohľadňovať.
+
+Pri určovaní urazenej dráhy laserového paprsku sme túto dráhu zmerali až po skončení experimentu a tým pádom sme uvažovali nepresnosť merania v podobe $"20 cm"$.
+
+Pri meraní rozmerov pomocou miktroskopu, sme mali najväčší problém určiť, presnú hranu/okraj diery, rozhranie týchto dier nebolo ostré ale na mnohćh miestach zostrapené. Preto toto meranie je predovšetkým týmto faktom výrazne zaťažené. Teda pre malé otvory sa problematický určuje touto metódou ich rozmer. 
+
+\section{Záver}
+
+V tabuľkách Tab. \ref{T_1} a Tab. \ref{T_2} vidíme porovnanie nameraných veľkosti otvorov v porovnaní s vypočítanými hodnotami pomocou difrakcie.
+
+Mriežková konštanta mriežky bola určená na
+\eq{
+d = "\(1.54\pm0.054\)\cdot10^{-6} m"\,.
+}
+
+Určili sme vlnovú dlžku použitého laseru viď vzťah \ref{R_V_4}.
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Interference a difrakce světla [cit. 16.5.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/423/mod_resource/content/8/10_interference_170218.pdf}
+
+
+
+
+\end{thebibliography}
+
+\end{document}
+

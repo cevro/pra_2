@@ -1,0 +1,70 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+\usepackage{mhchem}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+Optická lavice, otočné černé zrcadlo, 2x polarizační filtr, multimetr, otočný držák
+pro dvojlomný vzorek, čtvrtvlnná destička, světelný zdroj s matnicí, fotočlánek, 4 celofánové
+dvojlomné filtry, 4 barevné filtry, křemenný klín
+
+
+\input{vysl.tex}
+
+\section{Diskusia}
+
+\subsection{Určenie Brewsterového uhlu}
+Pri určovaní tohoto uhlu sme počítali s chybou odčítavania uhlu polu s chybou úvodnej kalibrácie $\Delta \phi = "1 \dg" $. 
+Pri meraní napätia však hodnota nebola ustálená a neustále sa menila v rozsahu aj niekoľko desiatok \%.
+
+V tabuľke \ref{T_1} je však chyba bez započítania tejto chyby a je tam zahrnutá len chyba meracieho prístroja pristroja. 
+V tejto tabuľke zároveň vidíme, že hodnota $|P|$ pre ktorú by malo platiť $0\leq|P|\leq1$m je väčšia ak 1, čo nasvedčuje zle nameraných hodnotám predovšetkým hodnoty $U_3$.
+
+\subsection{Malusov zákon}
+V grafe Obr. \ref{G_1} vidíme, funkcia $\mathrm{cos}^2$ neodpovedá dobre nameranej závislosti. Dôvodov bude asi viac, v prvej rade to bude samotná dióda, ktorou sa merala intenzita, ktorá bude mať pravdepodobne kalibračnú krivku intenzity k napätiu nelineárnu. Možnou ďalšiu príčinou je nedokonalosť polarizačných filtrov, a vplyv okolitého žiarenia.
+\subsection{Optická aktivita kremeňa}
+
+V tomto meraní hrala najväčšiu úlohu chyba multimetru a premenlivosť meraného napätia. Táto nestálosť napätia spôsobila nemožnosť odčítavania je ho veľkú chybu $\Delta U= "1 mV"$, pričom stojí za pripomenutie, že hodnoty sa pohybovali v rádoch jednotiek $\jd{mV}$. Aj napriek tomu sa podarilo získať nejaké hodnoty a zistiť mernú otáčavosť kremeňa.
+
+
+\section{Záver}
+Brewsterového uhol sa nám nepodarilo nájsť a overiť platnosť tohoto zákona.
+
+Naše namerané hodnoty odpovedajú Malasovmu zákonu.
+
+Merný otáčavý uhol kremeňa bol určený $A="\(5.64\pm1.10\)\cdot10^{-9} \dg m"$.
+
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Polarizace světla [cit. 2.5.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/422/mod_resource/content/7/Polariace_170223.pdf}
+
+
+
+
+\end{thebibliography}
+
+\end{document}
+

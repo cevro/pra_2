@@ -1,0 +1,117 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+Regulovatelné zdroje napětí: 300 V a 2 kV, regulovatelný zdroj proudu 10 A, zdroj
+střídavého napětí 6,3 V, ampérmetr, voltmetr, obrazovka se solenoidem, katodová trubice, Helmholtzovy
+cívky, aparatura na měření průměru elektronového svazku s dřevěnými posuvnými
+měřidly a zástěnou, tyčový a podkovovitý permanentní magnet.
+Millikanův přístroj HELAGO 559 412, napájecí jednotka HELAGO 559 421, 2x
+elektronické stopky HELAGO 313 033, vodiče, olej.
+
+
+\section{Postup merania}
+
+\subsection{Meranie náboja pozdĺžnym magnetickým poľom}
+
+\begin{enumerate}
+\item Podľa obrázku Obr. 7 \cite{C_1} bol zostavený obvod.
+\item Žhaviace napätie boli nastavené na $"1 kV"$
+\item postupne pre hodnoty z urýchlovacieho napätia z rozsahu $"100-300 V"$ bol nájdený taký prúd aby sa obraz oproti stavu keď neprechádza žiadne prúd zrotoval. Hodnoty boli zapísané
+\end{enumerate}
+
+\subsection{Meranie náboja kolmým magnetickým poľom}
+\begin{enumerate}
+\item Obvod bol zostavený podľa Obr. 8 \cite{C_1}
+\item Bolo zapojené žhaviace napätie a privedený prúd do Helmholtzových cievok
+\item Bol nastavený magnetizačný prúd a urýchľovacie napätie tak aby bol zväzok viditeľný a merateľný jeho polomer.
+\item postupnou zmenou napätia a prúdu sme udržiavali jeho polomer(priemer) a pritom zaznamenávali $I$ a $U$
+\end{enumerate}
+
+\subsection{Millikanov experiment}
+\begin{enumerate}
+\item Podľa obrázku Obr. 1 a Obr. 2 \cite{C_4} bol zostavený obvod.
+\item Napätie bolo nevolené na $U = "500 V"$
+\item Do aparatúry bola vháňané nabité olejové kvapky
+\item Vždy bola vybraná jedna častica a pre ňu boli pozorované (stopované) 2 prechody hor a 2 dole
+\end{enumerate}
+
+
+\input{vysl.tex}
+
+\section{Diskusia}
+
+V prvej časti pri meraní náboja elektrónu v pozdĺžnom poli sme sa dopúšťali asi najzávažnejších chýb merania.
+V prvej rade bolo veľmi náročné presne určiť kedy nastala jedna otáčka zväzku, jeho \uv{trajektória} na clone bola špirálovitá a s pripadajúcim magnetizačným prúdom sa zväzok viac fokusoval až v niektorých prípadoch do jedného bodu. V takomto prípade sme zaznačili údaje pre tento bod. Špirálovitá dráha spôsobovala aj v prípade nie úplne fokusovaného zväzku problém pri určení jeho rotácie. Aj z tohoto dôvodu uvažujem pri meraní prídu chybu až $"1 A"$.
+
+Druhá časť merania sa ukázala presnejšia, predovšetkým s veľkou presnosťou sa nám darili držať dráhu zväzku v dráhe s daným polomerom.
+o čom svedčí aj menšia chyba merania v tomto prípade pre $\Delta I = "0.2 A"$.
+
+V poslednej časti (Millikanov experiment) sa síce podarilo namerať náboj pomerne presne (vrámci chyby) ale náboj len z nameraných dát ťažko vyčítame. Dôvod je ten, že náboje nespĺňajú naše predpokladané chovanie a nemajú pomer v celočíselných násobkoch. Teda je nemožné určiť elementárny náboj.
+
+Pre ďalšie výpočty bol použitý druhý najmenší, prvý najmenší bol vyradený, pretože mal veľmi vysokú chybu merania času.
+
+K všetkým meraniam môžeme pristupovať nerelativisticky, pretože chyba merania je rádovo väčšia ako chyba STR.
+
+
+
+
+\section{Záver}
+
+Meraním náboja pozdĺžnym magnetickým poľom sme zistili pomer náboja k hmotnosti 
+\eq{
+\frac{e}{m_e} ="6.8\pm3.3 C\cdot kg^{-1}"\,,
+}
+kolmým nábojom
+\eq{
+\frac{e}{m_e}="\(1.12\pm0.41\)\cdot10^11 C\cdot kg^{-1}"\,.
+}
+
+Z Millikaveho experimentu bol určený náboj $"\(4.56\pm0.48\)\cdot 10^{-19}"$
+
+Hmotnosť elektrónu bola stanovená na 
+\eq{
+m_e = "2.24 \frac{MeV}{c^2}"\,.
+}
+
+
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Měrný náboj elektronu [cit. 20.03.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/425/mod_resource/content/6/3a_Naboj_170218.pdf}
+\bibitem{C_4}
+Millikanův experiment [cit. 20.03.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/6566/mod_resource/content/3/3b_Millikan_170218.pdf}
+
+\bibitem{C_2}
+Elektron [cit. 20.03.2017]Dostupné na:\url{https://cs.wikipedia.org/wiki/Elektron}
+
+\bibitem{C_3}
+Vzduch [cit. 20.03.2017]Dostupné na:\url{http://www.converter.cz/tabulky/vzduch.htm}
+
+\end{thebibliography}
+
+\end{document}
+

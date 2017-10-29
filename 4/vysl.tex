@@ -1,0 +1,116 @@
+\section{Výsledky merania}
+\subsection{Lámavého uhol}
+Namerané hodnoty lámavého uhla sú v tabuľke Tab. \ref{T_1}.
+Z nich bola pomocou vzťahu \ref{SCH_1} vypočítaná hodnota\eq{
+\sigma="60.065\pm0.028 \deg"\,.
+}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+\popi{d_1}{\deg} & \popi{d_1}{\deg} & \popi{d_1-d_2 = 2\sigma}{\deg} \\
+\hline
+$"281.894\pm0.001"$ & $"161.677\pm0.001"$ & $"120.217\pm0.001"$\\
+$"281.866\pm0.001"$ & $"161.769\pm0.001"$ & $"120.097\pm0.001"$\\
+$"281.869\pm0.001"$ & $"161.761\pm0.001"$ & $"120.108\pm0.001"$\\
+$"281.888\pm0.001"$ & $"161.769\pm0.001"$ & $"120.119\pm0.001"$\\
+$"281.869\pm0.001"$ & $"161.764\pm0.001"$ & $"120.106\pm0.001"$\\
+\hline
+\end{tabular}
+\caption{
+Namerané uhly $d_1$ a $d_2$ a vypočítaná hodnota $\sigma$ podľa \ref{R_1}
+} \label{T_1}
+\end{center}
+\end{table}
+
+\subsection{Ortuťové spektrum}
+Namerané hodnoty ortuťového ortuťového spektra sú v tabulke Tab. \ref{T_2}.
+
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+farba & \popi{d_1}{\deg} & \popi{d_1}{\deg} & \popi{\epsilon_0}{\deg} & \popi{n}{-} & \popi{\lambda}{nm} \\
+\hline
+oranžová     & $"268.942\pm0.001"$ & $"171.214\pm0.001"$ & $"48.864\pm0.002"$ & $"1.625\pm0.003"$ & $"579.065"$\\
+žltá         & $"268.964\pm0.001"$ & $"171.192\pm0.001"$ & $"48.886\pm0.002"$ & $"1.626\pm0.003"$ & $"576.074"$\\
+zelená       & $"269.242\pm0.001"$ & $"170.900\pm0.001"$ & $"49.171\pm0.002"$ & $"1.629\pm0.003"$ & $"546.074"$\\
+azurová      & $"269.883\pm0.001"$ & $"170.244\pm0.001"$ & $"49.819\pm0.002"$ & $"1.636\pm0.003"$ & $"435.835"$\\
+fialová      & $"270.858\pm0.001"$ & $"169.261\pm0.001"$ & $"50.799\pm0.002"$ & $"1.645\pm0.003"$ & $"407.781"$\\
+ultrafialová & $"271.519\pm0.001"$ & $"168.439\pm0.001"$ & $"51.540\pm0.002"$ & $"1.652\pm0.003"$ & $"404.656"$\\
+\hline
+\end{tabular}
+\caption{
+Namerané uhly $d_1$ a $d_2$ a vypočítaná hodnota $\epsilon_0$ podľa \ref{R_2} a index lomu $n$ podľa \ref{R_3} a tabuľková vlnová dĺžka $\lambda$.
+} \label{T_2}
+\end{center}
+\end{table}
+
+Namerané hodnoty boli vynesené do grafu Obr. \ref{G_1} a z fitu dostávame vzťah pre závislosť vlnovej dĺžky na indexe lomu\eq{
+n = 1.620\pm0.001 + \frac{0.49\pm0.24}{\lambda-386.2\pm8.1} \,. \lbl{R_V_1}
+}
+
+\begin{figure}
+\input{data/graph_0.tex}
+\caption{
+Závislosť indexu lomu $n$ na tabuľkovej vlnovej dĺžke $\lambda$ preložená závislosťou $y = 1.620\pm0.001 + \frac{0.49\pm0.24}{\lambda-386.2\pm8.1}$.
+}  \label{G_1}
+\end{figure}
+
+\subsection{Spektrum zinku}
+Bohužiaľ zinková výboja bola v čase merania pokazená, z tohoto dôvodu nebola nameraná.
+
+\subsection{Vodíkové spektrum}
+Namerané hodnoty vodíkového spektra sú v tabuľke \ref{T_3}.
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+farba & \popi{d_1}{\deg} & \popi{d_1}{\deg} & \popi{\epsilon_0}{\deg} & \popi{n}{-} & \popi{\lambda}{nm} \\
+\hline
+červená & $"278.727\pm0.001"$ & $"171.833\pm0.001"$ & $"53.447\pm0.002"$ & $"1.670\pm0.003"$ & $"376.484"$\\
+modrá   & $"270.069\pm0.001"$ & $"170.258\pm0.001"$ & $"50.331\pm0.002"$ & $"1.640\pm0.003"$ & $"361.719"$\\
+fialová & $"270.008\pm0.001"$ & $"169.344\pm0.001"$ & $"49.906\pm0.002"$ & $"1.635\pm0.003"$ & $"355.105"$\\
+\hline
+\end{tabular}
+\caption{Namerané uhly $d_1$ a $d_2$ a vypočítaná hodnota $\epsilon_0$ 
+podľa \ref{R_2} a index lomu $n$ podľa \ref{R_3} a vypočítaná hodnota 
+vlnovej dĺžky $\lambda$ podľa vzťahu \ref{R_V_1}.
+} \label{T_3}
+\end{center}
+\end{table}
+
+\subsection{Výpočet Rydbergovy konštanty}
+Pre jednotlivé farby bola postupne spočítaná Rydbergovu konštanta $R$
+\eq[m]{
+R_c &= "19.1 nm^{-1}" \,,\\
+R_m &= "14.8 nm^{-1}" \,,\\
+R_f &= "13.3 nm^{-1}" \,,\\
+}
+kde spodný index označuje farbu $c$ červenú, $m$ modrú a $f$ fialovú.
+
+
+\subsection{Sodíkové spektrum}
+
+Namerané hodnoty sodíkového spektra sú v tabuľke Tab. \ref{T_4}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c |}
+\hline
+farba & \popi{d_1}{\deg} & \popi{d_1}{\deg} & \popi{\epsilon_0}{\deg} & \popi{n}{-} & \popi{\lambda}{nm} \\
+\hline
+červená & $"269.002\pm0.001"$ & $"171.391\pm0.001"$ & $"48.805\pm0.002"$ & $"1.627\pm0.003"$ & $"385.12"$\\
+
+\hline
+\end{tabular}
+\caption{Namerané uhly $d_1$ a $d_2$ a vypočítaná hodnota $\epsilon_0$ 
+podľa \ref{R_2} a index lomu $n$ podľa \ref{R_3} a vypočítaná hodnota 
+vlnovej dĺžky $\lambda$ podľa vzťahu \ref{R_V_1}.
+} \label{T_4}
+\end{center}
+\end{table}
+
+

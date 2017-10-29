@@ -1,0 +1,110 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+\usepackage{mhchem}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{teor.tex}
+
+\input{vysl.tex}
+
+\section{Diskusia}
+\subsection{Určenie času}
+Surová dáta z osciloskopu sú bez časovej \uv{osi} (značky) a teda nieje 
+známa samplovacia frekvencia, táto sa určila porovnaním s referenčnými 
+dátami na\cite{C_shots_DB}, kde bola odhadnutá vzdialenosť maxím $U_l\(t\)$ a porovnaná 
+s maximami v dátach. Obecne zlý predpoklad, ale v našom prípade 
+nevyhnutý, bol ten že dáta majú $1200$ riadkov a osciloskop má mriežku 
+rozdelenú na 12 dielikov, z čoho sa dalo usudzovať, že na jeden dielik 
+bude pripadať okrúhly časový interval.
+
+\subsection{Určenie kalibračnej konštanty Rogowského pásku}
+Pri určovaní kalibračnej konštanty Rogowského pásku sme predpokladali, že náš pásik bude mať 
+kalibračnú krivku lineárnu\footnote{čo nie isté}.
+Chybou v našom prípade bolo predovšetkým, že sme porovnávali len maximá. 
+Pri našom kalibrovanom mohla byť poloha maxím ovplyvnená fluktuáciami a ich 
+veľkosť ovplyvnená toroidálným magnetickým poľom viď \ref{DIS_TMP}.
+Bohužiaľ sa mi k surovým dátam nepodarilo dostať, čo by skvalitnilo 
+našu kalibráciu, preto je táto chyba zaťažená veľmi veľkou ($\sim "20 \%"$) 
+systematickou chybou. 
+
+\subsection{Určenie odporu komory}
+Pri určovaní odporu komory sme použili už predchádzajúce dve kalibrácie 
+teda času a prúdu na základe Rogowského pásku, z čoho môže plynúť 
+istá nepresnosť a systematická chyba.
+Pri určovaní odporu komory sme robili lineárny fit, ktorý prechádzal 
+počiatkom\footnote{Predpoklad z Ohmovho zákona $U=RI$}. 
+Z grafu Obr. \ref{G_1} môžeme vidieť, 
+že pri tejto kalibrácii môžeme plne zanedbať indukčnosť komory a 
+kalibračná priamka sa kryje s dátami na celom rozsahu, a predovšetkým 
+pre vysoké prúdy a napätia teda v maxime $I_p$, 
+kde $U_L\(t\)=-L\frac{\mathrm{d} I\(t\) }{\mathrm{d} t}=0$. Z rovnice fitu vidíme, 
+že chyba fitu je v ráde promile.
+
+\subsection{Rušenie od toroidálenho magnetického poľa}\label{DIS_TMP}
+Na grafe Obr. \ref{G_V-1-I} je vidieť približne od $"1.75 ms"$ do $"2.25 ms"$
+rušenie od toroidálneho magnetického poľa, ktoré sa naintegrovalo a zachytilo. 
+Aj napriek niekoľkých pokusoch sa nám nepodarilo polohu Rogowského pásku 
+upraviť tak aby toto rušenie úplne vymizlo. 
+Rušenie má vplyv predovšetkým 
+na hodnoty maximálneho prúdu plazmou, ktorý je vďaka tomuto vyšší. 
+Oddelenie a vyfiltrovanie je taktiež náročné a dalo by sa riešiť 
+extrapoláciou hodnôt $\mathrm{d} I_p\(t\) / \mathrm{d} t$ do problémovej oblasti, 
+vzhľadom ale na nepresnosti tejto metódy bo bolo vhodné pri pre presnejšie 
+meranie zkalibrovať a zistiť veľkosť tohoto parazitného toku $\Phi$ v závislosti 
+na $B_t$ bez poloidálneho poľa.
+
+\subsection{Určenie životného času}
+Prvý z thresholdov, teda štartovací, bol určený ako bod kedy napätie 
+na~fotodióde prvý krát presiahne hodnotu $"0.01 V"$ ale po čase $"3.5 ms"$
+od začiatku merania, tento dôvod bol na potlačenie počiatočného šumu.
+
+Druhý teda konečný threshold, je problematický, je určený ako moment,
+kedy je napätie nižšie ako $"0.15 V"$ ale až najmenej $\Delta t = "3 ms"$ 
+za prvým thresholdom. Práve tento čase $\Delta t$ sa mení od výstrelu
+k výstrelu a nedá sa nastaviť obecne. Ako riešenie bez takýchto nechutných 
+podmienok je skúmať deriváciu tohoto napätia z jeho rapídneho nárastu 
+alebo poklesu určiť, tieto thresholdy.
+
+\subsection{Energie plazmy a doba udržania}
+K určeniu energie plazmy sme potrebovali určiť čas $t_0$, kde je $W_{th}\(t\)$ maximálne, 
+namiesto určovania jednej hodnoty, ktorá môže byť fluktuáciami skreslená a nepresná. 
+Lepším spôsobom by bolo zobrať $O\(t_0,\epsilon\)$~okolie $t_0$ a 
+v tomto okolí napočítať, priemernú hodnotu $\tau_E$ podľa vzťahu \ref{R_Tau_E}.
+
+\subsection{Záverom}
+Všetky naše merania sú závislé na počiatočnej kalibrácii, 
+ktorá sa pri tomto meraní ukazuje ako najväčší problém. 
+Jej kvalitné a presné prevedenie by výrazne spresnilo meranie. 
+Však aj napriek nepresnej kalibrácii nám časový to priebeh základných diagnostik výrazne neovplyvnilo viď Obr. \ref{G_V-1-U}, Obr. \ref{G_V-1-B}, Obr. \ref{G_V-1-I}, Obr. \ref{G_V-1-H} a  Obr. \ref{G_V-1-T}.
+
+\section{Záver}
+
+Z tabuľky \ref{T_1} vidíme, že najvyššiu teplotu dostávame pre výboj s ID \#23730.
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Vysokoteplotní plazma na tokamaku GOLEM [cit. 28.04.2017]Dostupné po prihlásení na :\url{http://golem.fjfi.cvut.cz/wiki/TrainingCourses/KFpract/15/Basics/uloha13A.pdf}
+\bibitem{C_shots_DB}
+GOLEM @ FJFI.CVUT [cit. 28.04.2017] Vojtěch Kusý :\url{http://golem.fjfi.cvut.cz/}
+
+\end{thebibliography}
+
+\end{document}
+

@@ -1,0 +1,105 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+\usepackage{mhchem}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+
+Scintilační detektor, zdroj vysokého napětí NL2410, čítač impulsů NL2301, jednokanálový
+analyzátor, multikanálový analyzátor PHYWE, osciloskop, PC, zdroje gama
+záření, olověné destičky, program MEASURE.
+
+\section{Postup merania}
+Scintilátor bol pripojený k zdroju napätia a pripojený k osciloskopu. 
+Na detektor bol položený meraný žiarič.
+Bola vyhotovená fotografia obrazu na osciloskope.
+
+
+Následne bol osciloskop prepojený a scintilátor bol pripojený k mnohokanálovému analyzátoru a jeho výstup k počítaču.
+Postupne boli namerané všetky žiariče, pozadie, a známe žiariče, u ktorých bolo medzi detektor a žiarič vložených niekoľko olovených doštičiek.
+
+
+\input{vysl.tex}
+
+\section{Diskusia}
+
+V prvej časti sme videli spektrum na osciloskope kde nám hrúbka (svetlosť) čiary vyjadruje intenzitu daného kanálu.
+Ekvivalentom hrúbky čiary je jej jasnosť toho sme využili a za pomoci analýzy fotky sme vyniesli spektrum.
+Fotka nieje nijak moc kvalitná a fotoaparát nieje kalibrovaný, či už súdkovitosť obrazu, jasnosť alebo citlivosť v rôznych častiach farbeného spektra.
+Zároveň nemáme ani zkalibrovanú osu $x$.
+
+Pri pokuse napojiť a skúmať spektrum cez jedno-kanálový analyzátor sa nám nepodarilo toto spektrum namerať.
+
+Pri zapojení do multikanálového analyzátoru sme namerali jednotlivé spektrá. 
+
+Všetky žiariče boli umiestnené v nepriehľadných krabičkćh. Pri pokladaní a výmene vzorkov sa teda mohli vzorky v krabičke otočiť alebo inak zmeniť polohu, a teda ich intenzita mohla byť iná pri rôznych meraniach.
+
+Detekcia píkov, hlavne píkov ktoré sú blízko pri sebe je veľmi nepresná a hlavne pri \ce{Ba} sa jednotlivé píky kryli. Teda pri fitovaní bola zvolená postupná metóda kde bol určený prvý pík a ten odčítaný od spektra a z tohoto nového spektra bol určený ďalší pík. Táto metóda má svoje nevýhody, však na tieto dáta je sa podľa môjho názoru zdala najprijateľnejšia. 
+
+Jednotlivé takto nájdené piky boli použité pri kalibrácii. 
+
+Pomocou kalibračnej krivky bolo preškálované spektrum neznámeho vzorku. Nakoniec bol pomocou tabuľky \cite{C_3} ako \ce{^{134}Cs}. 
+Pri určovaní sa hľadal v danej tabuľke žiarič s dlhším ako niekoľkodňovým polčasom rozpadu, 
+ktorý má pik najväčší pík okolo energie $E="767.68 keV"$. 
+Cézium \ce{^{134}Cs} má píky v $E="795.864\pm0.004 keV"$ a $E="801.953\pm0.004 keV"$, 
+ktoré sa javia pri našom rozlíšení ako jeden pík. 
+Ďalší charakteristický črt vidíme v okolí nameranej energie $E="544.78\pm4.412 keV"$, 
+kde podľa tabuľkových údajov vyskytuje skupina píkov o energiách 
+$E ="563.246\pm0.005 keV"$, $E ="569.331\pm0.003 keV"$ a $E ="604.721\pm0.002 keV"$, 
+kde je síce naše spektrum posunuté ale to je spôsobené už horeuvedenými dôvodmi.
+
+Následne bolo použitých 5 doštičiek z olova ako tienenie a namerané spektrum. Tu sa sa pri spracovaní ukázalo, že by bolo vhodné pre potreby spracovania namerať aj tienené pozadie. Doštičky položené na detektroe nám nechcene odlifrovali aj časť pozadia a teda pri odčítaní pozadia nám vychádzali záporné hodnoty. Z tohoto dôvodu som sa pri výpočte tienenia rozhodol neodčítať pozadie. 
+
+Fitovanie pomeru útlmu, $I_0/I$, sme robili len v oblasti do $"500 keV"$ resp. do $"700 keV"$, kde ešte neprevládal šum. 
+
+Comptonovo kontinum a Comptonovu hranu som určil z grafu tohoto dôvodu bola chyba stanovená na $"\pm20 keV"$. 
+
+Pík úplného pohltenia ani pík spätného rozptylu sa mi nepodarilo v spektre určiť.
+
+Zároveň sme zistili, že vzorka \ce{^{241}Am} nežiarí alebo má pre nás nemerateľnú aktivitu. 
+
+\section{Záver}
+Boli namerané spektrá jednotlivých žiaričov a určené píky. Podľa nich určená kalibračná krivka \ref{R_kal}.
+
+Následne bol určený koeficient útlmu olova \ref{R_u}. 
+
+A určený neznámy žiarič ako \ce{^{134}Cs}.
+
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+gama spektroskopia [cit. 18.04.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/420/mod_resource/content/15/Gamma%20170217.pdf}
+\bibitem{C_2}
+Online Spectrum Catalogs for Ge and Si(Li) [cit. 18.04.2017] Idaho National Laboratory :\url{http://www4vip.inl.gov/gammaray/catalogs/ge/catalog_ge.shtml}
+\bibitem{C_3}
+Gamma Energy (KeV) [cit. 18.04.2017] Idaho National Laboratory :\url{https://www.cpp.edu/~pbsiegel/bio431/genergies.html}
+
+\input{prilohy.tex}
+
+
+\end{thebibliography}
+
+\end{document}
+

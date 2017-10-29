@@ -1,0 +1,217 @@
+% ----------------------------------------------------------------------
+%  Pracovní úkoly
+% ----------------------------------------------------------------------
+\section{Pracovní úkoly}
+
+\begin{enumerate}
+\item \textbf{DÚ:} Domácí úkol
+
+\item Úkol 2
+
+\item Úkol 3
+\end{enumerate}
+
+% ----------------------------------------------------------------------
+%  Vypracování
+% ----------------------------------------------------------------------
+\section{Vypracování}
+
+
+	\subsection{Použité přístroje}
+		Odporová dekáda,\dots
+
+% ----------------------------------------------------------------------
+%  Teoretický úvod
+% ----------------------------------------------------------------------
+	\subsection{Teoretický úvod}
+		Tato šablona byla vytvořena pro účely předmětů 02ZFM a 02PRA na FJFI ČVUT v Praze, je však přizpůsobitelná i pro jiné předměty na této fakultě. Její použití je čistě dobrovolné a není nijak vyžadováno. Šablona však obsahuje několik užitečných příkazů, které tvorbu protokolu mohou usnadnit -- ty jsou definované v příloze (oddíl \ref{sec:makra}).
+		 
+		Jak používat tuto šablonu:
+		\begin{enumerate}
+		\item \verb|Sablona.zip| obsahuje hlavní soubor \verb|main.tex| a dvě složky \verb|img| a \verb|tex|. 
+		\item V souboru \verb|main.tex| je hlavní struktura dokumentu -- tu není třeba nijak zásadně upravovat; můžete se podívat, z čeho se skládá.
+		\item Ve složce \verb|img| jsou pouze loga fakulty a univerzity.  Sem můžete poté vložit další obrázky, které budete potřebovat.
+		\item Ve složce \verb|tex| se nachází soubory, které budete měnit a do nichž se píše samotný text:
+			\begin{enumerate}
+			\item \verb|tex/makra.tex| obsahuje údaje do hlavičky a případné další makra, která usnadní psaní,
+			\item \verb|tex/protokol.tex| je \textbf{hlavní soubor, do kterého budete protokol psát},
+			\item \verb|tex/reference.tex| obsahuje použitou literaturu, sem zadejte postupně veškeré zdroje, které použijete během vypracování,
+			\item \verb|tex/apendix.tex| obsahuje přílohy (typicky tabulky, grafy či jiné části, které se do protokolu nevejdou).
+			\end{enumerate}
+		\item Při překládání stačí překládat  \verb|main.tex|. Většina editorů si s prací s více soubory poradí.
+		\end{enumerate}
+		Nejlépe s touto šablonou můžete pracovat tak, že si pro každý protokol vytvoříte samostatnou složku, rozbalíte archiv \verb|Sablona.zip| do této složky a následně budete pracovat s \verb|.tex| soubory.
+		
+		Užitečné odkazy:
+		\begin{itemize}
+		\item Jedny z mnoha podrobných návodů v češtině: \\
+		\url{http://www.rudisweb.wz.cz/dokumenty/priruckalatex.pdf}, \url{https://www.vse.cz/vskp/id/1156561}
+		\item Stručný návod v češtině: \\
+		\url{http://www.abclinuxu.cz/clanky/latex-pro-zacatecniky}
+		\item Seznam příkazů z balíčku \verb|physics| -- velice usnadňuje psaní fyzikálních vzorců:\\
+		\url{http://mirror.unl.edu/ctan/macros/latex/contrib/physics/physics.pdf}
+		\item Online editor rovnic: \\
+		 \url{https://www.codecogs.com/latex/eqneditor.php}
+		\end{itemize}
+		
+		Jak psát tabulky:
+		\begin{itemize}
+		\item Online editor tabulek: \\
+				\url{http://www.tablesgenerator.com/}
+				\item Konverze tabulek z Excel do \LaTeX:\\
+				\url{https://www.ctan.org/tex-archive/support/excel2latex/}
+				\item Tabulkový editor pro Linux umožňující přímý export do \LaTeX:\\
+				\url{http://www.gnumeric.org/}
+		\end{itemize}
+		
+		Konkrétně k protokolům:
+		\begin{itemize}
+		\item Jak psát protokol: \\
+		\url{https://praktikum.fjfi.cvut.cz/documents/Pravidla.pdf}
+		\item Úvodní přednáška k praktiku:\\
+		\url{https://praktikum.fjfi.cvut.cz/documents/uvodni_prednaska_1617.pdf}
+		\item Příklad vypracovaného protokolu:\\
+		\url{https://praktikum.fjfi.cvut.cz/documents/vzorovy_protokol_161101.pdf}
+		\end{itemize}
+
+
+% ----------------------------------------------------------------------
+%  Postup měření
+% ----------------------------------------------------------------------
+	\subsection{Postup měření}
+	
+\textbf{Ukázky kódu:}
+		
+		Matice $	\mqty(a & b \\ c & d)$, derivace $\dv{f}{x} $, nerovnice
+		\begin{equation}
+			\label{eq:rovnice}
+			\vec g(x)\not=\int_{t_1}^{t_2} \ee^{\ii xt}\cdot \vec{r_0}\dd{t},
+		\end{equation}
+		kde $\ee$ je Eulerovo číslo, $\ii\in\mathbb{C}$, $t\in\langle t_1,t_2\rangle$, $\vec g(x)$ je vektorová funkce a $\vec{r_0}$ je jednotkový vektor. Všimněte si, že Eulerovo číslo, imaginární jednotka a diferenciál se píšou vzpřímeně (ne kurzívou) -- k tomuto slouží příkazy \verb|\ee, \ii, \dd{x}|. Špičaté závorky (pro intervaly) se píšou přes \verb|\langle ... \rangle|, nikoli \verb|< ... > | (to jsou nerovnítka, ne závorky), porovnejte: $\langle 3,5 \rangle, <3;5>$					
+		
+				 
+		Některé elementární funkce jako např. \verb|\sin, \cos, \exp| jsou příkazy, porovnejte: $\sin\theta, sin\theta$.
+		
+		Dále si můžeme uvést vztah
+	\begin{equation} \label{eq:chyba_aritmetickeho_prumeru}
+	\sigma_0 = \sqrt{\frac{1}{n(n-1)} \sum_{i=1}^{n}\left( x_i - \overline{x} \right)^2 },
+	\end{equation}
+		zde je třeba vypsat všechny veličiny, které ve výrazu vystupují\footnote{Poznámka pod čarou.}. Všimněte si, že rovnice jsou součástí textu, je za nimi většinou čárka (pokud po rovnici věta pokračuje) či tečka. Vkládejte rovnice tam, kde logicky do textu patří, nikoli na konec odstavce.
+		
+		Důležité a dlouhé rovnice by také měly být uvozené \verb|\begin{equation} ... \end{equation}|, nikoli \verb|$$ ... $$|, aby byly očíslované. Případné očíslování lze zrušit přes např. přes \verb|\begin{equation*}|.
+			
+		Závěrem uvedeme definici
+			\begin{equation}\label{eq:chyba_neprime_mereni}
+			\sigma_f = \sqrt{\left( \pdv{f}{x} \right)^2 \sigma^2_x + \left( \pdv{f}{y} \right)^2 \sigma^2_y + \left(\pdv{f}{z} \right)^2 \sigma^2_z + \ldots},
+			\end{equation}
+			kde $f$ je \dots (doplňte dle potřeby).
+			
+			Každý vzorec, obrázek nebo tabulku si pojmenujte pomocí \verb|\label{odkaz}|. Všechny odkazy se v .pdf zobrazí modře a jsou klikatelné.  Jak řešit odkazy v textu:
+	\begin{itemize}
+	\item Na obrázky se v textu odkazujte pomocí \verb|Obr.~\ref{...}|: Obr.~\ref{fig:testovaci}.
+						
+	\item Na literaturu se odkazujte pomocí \verb|\cite{...}|: \cite{bib:zadani}.
+						
+	\item Na rovnice se v textu odkazujte pomocí \verb|\eqref{...}|: \eqref{eq:rovnice}.
+						 
+	\end{itemize}			
+			
+		Na Obr.~\ref{fig:testovaci} se nachází ukázka prostředí obrázků. Na Obr.~\ref{fig:slozeny} se nachází složený obrázek. Na jednotlivé podobrázky se můžeme odkázat pomocí Obr.~\ref{fig:slozeny1} a Obr.~\ref{fig:slozeny2}. Všimněte si, že obrázky jsou plovoucí objekty, které se umístily až na následující stránku. Každý obrázek nebo tabulka jsou samonosné -- z obrázku a popisku musí být zřejmé, oč se jedná, a následně se na tyto objekty pouze odkazujeme.
+		
+		\begin{figure}[!hbt] %bez této hranaté závorky se obrázek umístí na vrchol stránky
+		\centering
+		\includegraphics[width=0.3\textwidth]{img/fjfi} %nejdůležitější řádek - obsahuje cestu k obrázku a také jeho relativní šířku k šířce textu
+		%všiměte si, že je možné vložit obrázek vnořený ve složce img - tam poté můžete ukládat další obrázky 
+		\caption{Popisek obrázku. Převzato z \cite{bib:zadani}} %popisek obrázku, který se zobrazí pod obrázkem
+		\label{fig:testovaci} %interní popis obrázku, který použijete k odkazování se
+		\end{figure}			
+			
+		\begin{figure}[!hbt]
+		\centering
+		\begin{subfigure}[b]{0.2\textwidth}
+		       \includegraphics[width=\textwidth]{img/cvut}
+		       \caption{Obrázek 1.}
+		       \label{fig:slozeny1}
+		       \end{subfigure}
+		\hspace{2cm}
+		\begin{subfigure}[b]{0.2\textwidth}
+		       \includegraphics[width=\textwidth]{img/fjfi}
+		       \caption{Obrázek 2.}
+			   \label{fig:slozeny2}
+		\end{subfigure}
+		\caption{Složený obrázek.}
+		\label{fig:slozeny}
+		\end{figure}		
+			
+
+					
+			
+% ----------------------------------------------------------------------
+%  Naměřené hodnoty
+% ----------------------------------------------------------------------				
+		\subsection{Naměřené hodnoty}
+		
+			Naměřené hodnoty se nachází v Tab.~\ref{tab:vzor}. Kód na psaní jednotek v hlavičce tabulky: \\ \verb|\tabh{I}{mA} & \tabh{v}{m \cdot s^{-1}}|.
+				\begin{table}[!ht]
+				  \centering
+				    \begin{tabular}{|r|r|r|r|r|r|}
+				    	\hline
+				    	\tabh{I}{mA} & \tabh{v}{m \cdot s^{-1}} & \tabh{m}{kg}& \tabh{Q}{C} & \tabh{n}{mol} & \tabh{T}{\celsius} \\ \hline\hline
+				    	     331 &                            -9 &      351 &       8 &     -0,53 &           0,64 \\ \hline
+				    	     714 &                          -142 &      718 &     145 &     -0,07 &           0,07 \\ \hline
+				    \end{tabular}
+				  \caption{Vzorová tabulka. $I$ je proud,\dots }
+				  \label{tab:vzor}
+				\end{table}
+								
+				
+			Vypočtená hodnota $\epsilon$ je 
+			\begin{equation}
+			\epsilon=\hodn{1,0}{0,4}{J\cdot s^{-2}}.
+			\end{equation}
+			Zdrojový kód: \verb|\epsilon=\hodn{1,0}{0,4}{J\cdot s^{-2}}|. Chyba je vypočtená ze vztahu \eqref{eq:chyba_neprime_mereni}.
+			
+			Všimněte si, že jednotky nemají být kurzívou. K tomuto účelu je v této šabloně příkaz \verb|\unit{ }|. Používá se bez mezery, rovnou za číslo! $3\unit{m\cdot s^{-1}}$ se tedy správně napíšou jako \verb|$3\unit{m \cdot s^{-1}}$|.
+			
+			Zkuste také psát součin jednotek s tečkou \verb|\cdot| (nikoli interpunkční tečkou . ), jednotky jsou pak lépe čitelné a nedochází k záměně milisekund za metry krát sekundy. 
+			
+			Pro ještě lepší zadávání jednotek je možné použít balíček \verb|siunitx|: \url{http://www.dpg-physik.de/dpg/gliederung/junge/rg/wuerzburg/Archiv/WS%202011-12/LaTeX/siunitx.pdf}. 
+			
+			Ten řeší i problém s tím, že správně by se v mikrometrech nemělo řecké písmeno $\mu$ psát kurzívou. Porovnejte: $\SI{100}{\micro\meter}$, $100\unit{\mu m}$. Zdrojový kód: \verb|$\SI{100}{\micro\meter}$, $100\unit{\mu m}$|.
+			
+			\newpage % umělé zalomení stránky
+			
+% ----------------------------------------------------------------------
+%  Diskuse
+% ----------------------------------------------------------------------			
+	\subsection{Diskuse}
+	
+			
+
+		Tipy a triky pro psaní v \LaTeX:
+			\begin{itemize}
+			\item Projděte si pravidla pro psaní matematických a fyzikálních výrazů: 	\url{http://www.aldebaran.cz/studium/vyrazy.pdf}
+			\item Používejte pevnou mezeru \verb|~| tam, kde se nemá zlomit řádek (aby nevznikaly na konci řádku osamocené jednopísmenné předložky): \verb|s~mezerou|. 
+			Toto dělá automaticky balíček \verb|encxvlna|, ten je však třeba doinstalovat: \url{https://merlin.fit.vutbr.cz/wiki/index.php/%C4%8Cesk%C3%A1_sazba_v_LaTeXu#Vlnky}
+			
+			\item Uměle zalamujte řádky, které přesahují šířku textu a nezalomily se samy: \verb|diagona\-lizovatelnost| = diagona\-lizovatelnost.
+
+			\item Používejte desetinnou čárku (český standard), nikoli tečku (anglický standard).
+			
+			\item Pomlčka jakožto interpunkční znaménko se píše pomocí \verb|--| a mínus je třeba vysázet v matematickém módu (tj. ne \verb|-3 V|, ale \verb|$-3\unit{V}$|): $-3\unit{V}$ 
+			
+			\item České uvozovky nepište pomocí \verb|,, ... "|, ale příkazem \verb|\uv{...}|, který je součástí zavedeného balíčku \\ \verb|\usepackage[czech]{babel}|: \uv{takto}.
+			
+			\item Je doporučeno vkládat obrázky z programu GNUPlot pomocí \url{https://www.ctan.org/pkg/gnuplottex} -- GNUPlot může uložit obrázek přímo jako \texttt{.tex}). Výsledkem jsou krásné grafy přizpůsobené formátu textu.
+				\end{itemize}
+
+% ----------------------------------------------------------------------
+%  Závěr
+% ----------------------------------------------------------------------
+			
+\section{Závěr}
+		Změřili jsme, určili jsme, diskutovali jsme, \dots
+	
+
+
+

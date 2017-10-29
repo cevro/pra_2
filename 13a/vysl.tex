@@ -1,0 +1,129 @@
+\section{Výsledky merania}
+\subsection{Vákuový výboj}
+\subsubsection{Numerická integrácia}
+Na začiatku bol spracovaný vákuový výboj(\#23719 podľa \cite{C_shots_DB}). 
+Numericky boli vyintegrované hodnoty $\frac{\mathrm{d} B_t\(t\)}{\mathrm{d} t}$ 
+a $\frac{\mathrm{d} I^\prime_{tot}\(t\)}{\mathrm{d} t}$, čím sme dostali $B_t\(t\)$ a $I^\prime_{tot}\(t\)$. 
+Za integračný krok bola použité samplovacia frekvencia dát z osciloskopu $\Delta t = "1\cdot10^{-7} s"$.
+
+\subsubsection{Kalibracia Rogowského pásku}
+Pomocou porovnanie maxím $I^\prime_{tot_{max}}$ s referenčnými dátami $I_{tot_{max}}$\cite{C_shots_DB} , určil kalibračný koeficient Rogowského pásku. 
+\eq{
+C = \frac{I_{tot_{max}}}{I^\prime_{tot_{max}}} = "2.75\cdot10^{6} "\,. \lbl{R_CAL_C_1}\footnote{Zároveň $1/2 C$ z \cite{C_1}}
+}
+Touto kalibračnou konštantou boli preškálované všetky hodnoty $I_{tot}\(t\)$ pre všetky následujúce merania.
+\subsubsection{Odpor komory}
+Zo závislosti napätia $U_l\(t\)$ na prúde $I_{tot}\(t\)$, ktorý je pri vákuovom výboji rovný prúdu komorou, bol zistený odpor komory
+\eq{
+R = "\(14.308\pm0.001\) m\Omega"\,,
+}
+kalibračná krivka spolu so závislosťou $U_l\(t\)$ na $I_{tot}\(t\)$ je v grafe Obr. \ref{G_1}.
+
+\subsection{Výboj s pracovným plynom}
+
+Namerané pre všetkých 6 výbojov boli najskôr vyintegrované hodnoty $\frac{\mathrm{d}B_t}{ \mathrm{d}t}$ a $\frac{\mathrm{d} I_{tot}}{\mathrm{d} t}$ rovnako 
+ako v predchádzajúcom prípade. 
+Prúd $I_{tot}\(t\)$ bol zkalibrovaný pomocou kalibračnej konštanty zo vzťahu \ref{R_CAL_C_1}. 
+\subsubsection{Prúd plazmou}
+Pre výpočet prúdu plazmou sme využili vzťah (15) z \cite{C_1}
+A našli sme si jeho maximálnu hodnotu.
+
+\subsubsection{Teplota plazmy}
+Podľa vzťahu (4) z \cite{C_1}
+sme určili teplotu plazmy $T\(t\)$.
+
+\subsubsection{Ohmický príkon}
+Ohmický príkon sme určili z napätia $U_l\(t\)$ a prúdy plazmou $I_p\(t\)$ ako $P\_{OH}\(t\) = I_p\(t\) U_l\(t\)$.
+
+\subsubsection{Energia plazmy}
+Energiu plazmy $W_{th}\(t\)$ sme určili podľa vzťahu (7) z \cite{C_1}, 
+kde $n$ sme určili pre každý výstrel zo vzťahu (5) z \cite{C_1}.
+Pričom teplotu je potrebné previesť z $[\jd{eV}]$ na $[\jd{K}]$.
+
+
+\subsubsection{Doba udržania}
+Doba udržania $\tau_E$ bola určená v čase $t_0$, kde $W_{th}\(t\)$ nadobúda svoje maximum, teda
+\eq{
+\frac{\mathrm{d} W_{th}\(t\)}{\mathrm{d} t} = 0\,,
+}
+potom vzťah (9) z \cite{C_1}
+prechádza na $P_{loss}\(t\)=P_{OH}\(t\)$, a teda 
+\eq{
+\tau_E = \frac{W_{th}\(t_0\)}{P_{OH}\(t_{0}\)}\,.\lbl{R_Tau_E}
+}.
+
+\subsubsection{Doba udržania}
+Doba udržania bola vypočítaná pomocou dvoch thresholdov z $H_\alpha\(t\)$ radiácie.
+Čas začiatku a konca života plazmy.
+
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ |  c | c |  c |  c |  c |  c | c | }
+\hline
+Výstrel ID podľa \cite{C_shots_DB} & \popi{T_{max}}{eV} & \popi{I_{p_max}}{kA} & \popi{W_{max}}{10^{-3} J} & \popi{\tau_E}{\cdot 10^{-3}ms} & \popi{P_{oh_{max}}}{kW} & \popi{t}{ms} \\
+\hline
+\#23728&$"39.33\pm0.04"$&$"2.901\pm0.03"$&$" 93.69\pm0.09"$&$" 3.96\pm0.01"$&$"30.35\pm0.03"$&$"6.30"$\\
+\#23729&$"40.44\pm0.04"$&$"3.453\pm0.03"$&$" 74.66\pm0.07"$&$" 2.30\pm0.01"$&$"44.29\pm0.04"$&$"5.65"$\\
+\#23730&$"46.60\pm0.05"$&$"3.837\pm0.04"$&$" 93.99\pm0.09"$&$" 3.40\pm0.01"$&$"49.74\pm0.05"$&$"6.30"$\\
+\#23731&$"36.47\pm0.04"$&$"2.325\pm0.02"$&$"144.11\pm0.14"$&$"10.51\pm0.02"$&$"20.63\pm0.02"$&$"6.31"$\\
+\#23732&$"36.11\pm0.04"$&$"2.756\pm0.03"$&$"146.32\pm0.15"$&$"15.05\pm0.02"$&$"36.87\pm0.04"$&$"4.90"$\\
+\#23733&$"31.44\pm0.03"$&$"2.478\pm0.02"$&$"104.13\pm0.10"$&$" 8.94\pm0.02"$&$"31.45\pm0.03"$&$"4.64"$\\
+\hline
+\end{tabular}
+\caption{ Parametre jednotlivých výstrelov, kde $T_{max}$ je maximálne elektronová teplota plazmy, 
+$I_{p_{max}}$ ja maximálny prúd plazmou, $W_{max}$ je maximálna energia plazmy, 
+$\tau_E$ je čas udržania plazmy a $P_{OH_{max}}$ je maximálna hodnota ohmického odporu a $t$ doba života plazmy.
+} \label{T_1}
+\end{center}
+\end{table}
+
+
+\begin{figure}
+\input{data/graph_vakum_1-1_R_kal.tex}
+\caption{
+Volt-amperová charakteristika komory, preložená fitom $U=\(14.308\pm0.015\)10^{-3}I$, kde smernica predstavuje odpor komory $R$.
+}\label{G_1}
+\end{figure}
+
+
+\begin{figure}
+\input{data/data_vystrel_1-1_post.datU_l.tex}
+\caption{
+Závislosť napätia $U_l\(t\)$ na čase $t$ pre výstrel \#23728. S určenými časmi začiatku a konca života plazmy.
+}\label{G_V-1-U}
+\end{figure}
+
+\begin{figure}
+\input{data/data_vystrel_1-1_post.datB_t.tex}
+\caption{
+Nekalibrovaná závislosť toroidálneho magnetického poľa $B_t\(t\)$ na čase $t$ pre výstrel \#23728.
+}\label{G_V-1-B}
+\end{figure}
+
+\begin{figure}
+\input{data/data_vystrel_1-1_post.datI_p.tex}
+\caption{
+Závislosť prúdu plazmy $I_p\(t\)$ na čase $t$ pre výstrel \#23728. S určenými časmi začiatku a konca života plazmy.
+}\label{G_V-1-I}
+\end{figure}
+
+\begin{figure}
+\input{data/data_vystrel_1-1_post.datH_a.tex}
+\caption{
+Závislosť napätia na $H_\alpha\(t\)$ dióde na čase $t$ pre výstrel \#23728. S určenými časmi začiatku a konca života plazmy.
+}\label{G_V-1-H}
+\end{figure}
+
+
+\begin{figure}
+\input{data/data_vystrel_1-1_post.dat-T.tex}
+\caption{
+Závislosť teploty plazmy $T\(t\)$ na čase $t$ pre výstrel \#1. S určenými časmi začiatku a konca života plazmy.
+}\label{G_V-1-T}
+\end{figure}
+
+
+
+
+

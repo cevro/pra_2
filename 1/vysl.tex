@@ -1,0 +1,132 @@
+
+\section{Výsledky merania}
+Nazačitaku bola digitálnym teplomerom určená teplota $t="23.1 \C"$.
+Z nej podľa vzťahu \ref{R_1} bola dopočítaná odpovedajúca rýchlosť zvuku
+\eq{
+v = "345.6 m\cdot s^{-1}"\,.
+}
+
+\subsection{Stojaté vlněnie na strune}
+
+Dĺžka struny je $L=" \(1.176\pm0.01\) m"$. Z tejto dĺžky bola vypočítaná podľa vzťahu \ref{R_2} predpokladaná frekvencia prvého módu, $f ="23.3 Hz"$.
+
+Namerané hodnoty vyšších módov v závislosti od frekvenciu sú v tabuľke Tab. \ref{T_1}.
+
+Následne z grafu Obr. \ref{G_1} bola určená smernica $C="\(23.38\pm0.03\)n"$ a pomocou vzťahu \ref{R_2} a \ref{SCH_1} hodnota 
+\eq{
+\mu = "\(0.0163\pm0.0001\) kg\cdot m^{-1}"\,.
+}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline
+\popi{n}{-} & \popi{f}{Hz} \\
+\hline
+1  & $ 23.30 $\\
+2  & $ 46.80 $\\
+3  & $ 69.90 $\\
+4  & $ 93.00 $\\
+5  & $ 116.1 $\\
+6  & $ 140.5 $\\
+7  & $ 162.7 $\\
+8  & $ 187.6 $\\
+9  & $ 210.4 $\\
+10 & $ 234.9 $\\
+\hline
+\end{tabular}
+\caption{Závislosť frekvencie $f$ od módu kmitania struny $n$.
+} \label{T_1}
+\end{center}
+\end{table}
+
+
+\begin{figure}
+\input{data/graph_0.tex}
+\caption{Závislosť frekvencie $f$ od módu kmitania struny $n$, preložená lineárnou závislosťou
+}  \label{G_1}
+\end{figure}
+
+\subsection{Quinckova trubice}
+
+Namerané hodnoty polohy minim vlnenia, pre jednotlivé polohy, viď priložené pracovné papiere.
+Z nich boli pre jednotlivé frekvencie vypočítané podľa \ref{SCH_1} priemer a chyba. viď Tab. \ref{T_2}.
+
+Do grafu Obr. \ref{G_2} bola vynesená závislosť vlnovej dĺžky $\lambda\equiv 2\Delta$ od doby kmitu $T$. 
+Zo smernice preloženej závislosť bola určená rýchlosť zvuku
+\eq{
+v = "\(348.7\pm6.7\) m\cdot s^{-1}"\,.
+}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ | c | c |}
+\hline
+\popi{f}{kHz} & \popi{\mean{\Delta d_i}}{m} \\
+\hline
+$2$ & $0.080\pm0.004$\\
+$2.5$ & $0.070\pm0.001$\\
+$3$ & $0.058\pm0.002$\\
+$3.5$ & $0.050\pm0.001$\\
+$4$ & $0.041\pm0.005$\\
+$4.5$ & $0.039\pm0.001$\\
+$5$ & $0.034\pm0.008$\\
+$5.5$ & $0.031\pm0.001$\\
+$6$ & $0.029\pm0.001$\\
+$4.25$& $0.040\pm0.001$\\
+\hline
+\end{tabular}
+\caption{Vypočítané hodnoty priemernej dĺžky vzdialenosti minim $\Delta d_i$ od frekvencie $f$
+} \label{T_2}
+\end{center}
+\end{table}
+
+
+
+\begin{figure}
+\input{data/graph_1.tex}
+\caption{Závislosť vlnovej dĺžky $\lambda$ od doby kmitu $T$ preložená funkciou $\(348.7\pm6.7\)T - 0.001$.
+}  \label{G_2}
+\end{figure}
+
+\subsection{Helmholtzovy rezonátory}
+V tabuľke Tab \ref{T_3} sa nachádzajú, a sú vynesené do grafu Obr. \ref{G_3}.
+Z neho bola preložením určená hodnota rýchlosti zvuku $v="\(293.2\pm9.0\) m/s"$.
+
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ | c | c | c | c |}
+\hline
+\popi{f_n}{Hz} & \popi{V_v}{l} & \popi{V}{l} & \popi{f_v}{Hz}\\
+\hline
+$175.8 $ & $ 0.05 $ & $ 0.98 $ & $ 187.78 $\\
+$175.8 $ & $ 0.1  $ & $ 0.93 $ & $ 192.76 $\\
+$177.8 $ & $ 0.15 $ & $ 0.88 $ & $ 198.16 $\\
+$179.7 $ & $ 0.2  $ & $ 0.83 $ & $ 204.04 $\\
+$179.7 $ & $ 0.25 $ & $ 0.78 $ & $ 210.48 $\\
+$179.7 $ & $ 0.3  $ & $ 0.73 $ & $ 217.57 $\\
+$179.7 $ & $ 0.35 $ & $ 0.68 $ & $ 225.42 $\\
+$179.7 $ & $ 0.4  $ & $ 0.63 $ & $ 234.20 $\\
+$179.7 $ & $ 0.45 $ & $ 0.58 $ & $ 244.09 $\\
+$179.8 $ & $ 0.5  $ & $ 0.53 $ & $ 255.34 $\\
+\hline
+\end{tabular}
+\caption{Namerané hodnoty frekvencie rezonancie $f_n$, 
+vypočítané hodnoty rezonancie $f_v$ podla \ref{R_30} pri objeme vody $V_v$ a z neho dopočítaný objem $V$.
+} \label{T_3}
+\end{center}
+\end{table}
+
+
+
+
+\begin{figure}
+\input{data/graph_2.tex}
+\caption{Teoretická a nameraná závislosť rezonančnej frekvencie $f_n$ a $f_v$ od objemu $V$, preložená funkciou $f=\frac{293.2\pm9.0}{2\pi}\sqrt{\frac{\pi r^2}{l+1.4r}} \frac{1}{\sqrt{V}}$.
+}  \label{G_3}
+\end{figure}
+
+
+
+

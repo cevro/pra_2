@@ -1,0 +1,60 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+Pulfrichův fotometr, zdroj napětí 0–30 V, wolframová vlákna (dvě světelné žárovky),
+multimetr, ohmmetr, zdroj referenčního napětí.
+
+\section{Postup merania}
+Pomocou multimetrov bola v rozsahu od $0$ do $"50 W"$ určena VoltAmpérová charakteristika žiarovky.
+
+Opotom bola žiarovka 3-krát menej a 3-krát viac rozžiarená ako referenčná žiarovka a pomocou fotometru sa namerali pomery transmysí.
+
+
+\input{vysl.tex}
+
+\section{Diskusia}
+
+V prvej časti merania pri meraní VA charakteristiky, sme nedošli na maximálne napätie čo umožnovala žiarovka a jej výkon sme držali pod hladinou $P_{max}="50 W"$. Z tohoto dôvodu nám vychádza teplota oprosti predpokladu o kusok nižšia.
+
+V druhej časti úlohy sme porovnávali intenzity cez fotometer, toto sa ukázalo ako najvačší problém. Pri niektorých farbávh neboli schopné naše oč rozpoznať kedy presne nastane rovnosť intenzít a teda je hlavne pri clonke 9 a 10 hodnota veľmi nepresná. Preto je v tabuľkách použité značenie iné značenie chýb. Obecne nám však teplota vyšlo vždy menšia ko teplota spočítaná.
+
+\section{Záver}
+
+Namerali sme voltaméprvu charakteristiku žiarovky viď Obr. \ref{G_0}, a overerili Stephan-Boltzmanov vyžarovací zákon, viď Obr. \ref{G_1} a Obr. \ref{G_2}
+
+Následne sme namerali transmisi žiarovky na jej vlnovej dlžke a z nej určili teplttu vlákna viď Tab \ref{T_3_X}
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Měření teploty wolframového vlákna [cit. 27.03.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/3964/mod_resource/content/19/wolfram170321.pdf}
+
+
+
+\end{thebibliography}
+
+\end{document}
+

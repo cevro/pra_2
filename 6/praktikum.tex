@@ -1,0 +1,74 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+Optická lavice s jezdci a držáky čoček, světelný zdroj pro optickou lavici, mikroskopický
+objektiv, Ramsdenův okulár v držáku s Abbeho kostkou, spojné čočky +200, matnice,
+clona se šipkou, pomocný světelný zdroj s milimetrovou stupnicí, křížový vodič s objektivovým
+mikrometrem, matnička se stupnicí 50 × 0, 1 mm, pomocný mikroskop s měřícím okulárem, pomocný
+dalekohled, kovové měřítko, trojnožka.
+
+\section{Postup merania}
+\begin{enumerate}
+\item Pre rozne vzdialenosti predmetu (šípky) a obrazu(tienidla) sme našli pozíciu kde je ostrý obraz na tienidle.
+\item tento postup sme zopakovali pre šošovku \uv{+200} a Ramsdenový objektív a Mikroskopický objektív.
+\item následne sme zostavili lupu a pomocou Ábelovej kocky si paprsok rozdelil tak aby sme videli stupnicu referenčnú (na konvenčnú zrakovú vzdialenosť od kocky) a druhú pozorovanú na ktorú mierila lupa.
+\item Následne sme podľa obrázkov na nástenke zostavili mikroskop\footnote{A ako toto mám sakra citovať??? -- poznámka autora} a odmerali jeho zväčšenie rovnako u lupy.
+\item Potom sme na trojnožke zostavili ďalekohľad a odmerali jeho zväčšenie priamou metódou pozorovaním tej istej stupnice cez Ábelovú kocku, priamo a cez ďalekohľad. 
+\end{enumerate}
+\input{vysl.tex}
+
+\section{Diskusia}
+V prvej časti, pri meraní šošovky \uv{+200}, sme sa podotýkali s komplikaciami pri určovaní presnej polohy kedy je obraz ostrý. Hĺbka ostrosti tohoto obrazu bola veľká teda sme nevedeli určiť kde presne je obraz.
+Preto treba uvažovať pri tomto meraní ešte systematickú chybu $\sim\pm2cm$ teda $f\_B="181.76\pm4.87\text{stat.}\pm20\text{sys.} mm"$ a $f_g ="184.1\pm11.1\text{stat.}\pm20\text{sys.} mm"$.
+
+Pri zvyšných meraniach nehrala bola hĺbka ostrosti v ráde $0.5mm$, teda pre nás nemerateľná a môžeme túto chybu zanedbať.
+
+Tu sa vynára ďalší problém, a to presnosť určenia polohy zdroja svetla, síce držiak bol umiestnený v polohe $"100.0 cm"$, ale meraný predmet bol presunutý o $7.0cm \pm0.5cm$, čo pri malých vzdialenostiach meraného optického pristroja od predmetu môže vytvoriť veľkú chybu. Nepresnosť určovania pochádza hlavne z toho, že sa táto vzdialenosť od osi nedá priamo odmerať, a teda sa meria na viackrát.
+
+Obecne pri práci s Ábelovou kockou sme mali problém sa správne zamerať na cieľ a spočítať pomer. Však nakoniec pomery boli veľmi jednoducho vyčítateľné.
+ 
+
+\section{Záver}
+Ohnisková vzdialenosť šošovky \uv{+200} bola určená Besselovou metódou $f\_B="181.76\pm4.87\text{stat.}\pm20\text{sys.} mm"$ a geometrickou ako $f_g ="184.1\pm11.1\text{stat.}\pm20\text{sys.} mm"$.
+
+Ohnisková vzdialenosť mikroskopického objektívu $f = "92.15\pm2.63 mm"$ a jeho ohnisková rovina, $x="\(52\pm6\) mm"$.
+
+Ohnisková vzdialenosť Ramsdenového objektívu $f = "93.27\pm0.73 mm"$ a jeho ohnisková rovina, $x="\(113\pm6\) mm"$.
+
+Následne boli určené pomery zväčšenia nasledovne lupa $10\pm1$, mikroskop $50\pm1$ a ďalekohľadu $20\pm1$
+
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Geometrická optika [cit. 27.03.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/419/mod_resource/content/5/Optika_170217.pdf}
+
+
+
+\end{thebibliography}
+
+\end{document}
+

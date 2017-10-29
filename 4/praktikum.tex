@@ -1,0 +1,96 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+Goniometr, hranol (délka hrany $"3 cm"$), stolní lampa, rtuťová, zinková, vodíková a
+sodíková výbojka.
+
+\section{Postup merania}
+
+\subsection{Lámavý úhol}
+
+\begin{enumerate}
+\item Na goniometer sme umiestnili optický hranol a nastavili ho tak aby sa svetlo lámalo no obe strany hranola
+\item Zmerali sme uhol odrazu pre obe strany
+\end{enumerate}
+
+\subsection{Hg spektrum}
+\begin{enumerate}
+\item Pripojili sme ortutovú výbojku výmenou za zameriavac terčík
+\item Goniometrom sem postupne odmerali pre každú spektrálnu čiaru uhly na oboch stranách
+\end{enumerate}
+
+Identický postup ako u Hg bol použitý aj pre ostatné typy výbojek.
+
+
+\input{vysl.tex}
+
+\section{Diskusia}
+
+Pri celom experimente sem pracovali s goniometrom, ktorý ma vysokú presnosť, z tohoto dôvodu sú uhly prevedené na stupne písané s vačším počtom platných cifier.
+
+presnosť goniometru závisela hlavne na presnosti zamerania spektrálnej čiary, čo hlavne v oblastiach modrého a fialové svetla bol problém. Pri vodíkovje výbojke sme museli štrbinu otvoriť viac a teda spektrálna čiara bola širšia, čo nám znepresnilo meranie.
+
+Aj napriek presnej metóde, sme sa u vodíkové a sodíkového spektra dopustili s najväčšiu chybou systematickej chyby merania ktorou sú tieto merania poznačené.
+
+Pre porovnanie tabuľkové\cite{C_2} VS namerané hodnoty
+\eq[m]{
+"656.272 nm"~&vs~"376.484 nm" (H_2 \text{červená}) \,,\\
+"486.133 nm"~&vs~"361.719 nm" (H_2 \text{modrá}) \,,\\
+"434.047 nm"~&vs~"355.105 nm" (H_2 \text{fialová}) \,,\\
+"\sim589 nm"~&vs~"355.105 nm" (Na \text{žltá}) \,.\\
+}
+Rydbergovu konštanta v porovnaní s vypočítanou $R="10^{6} m^{-1}"$ sa líši o cca polovicu, hlavným zdrojom tejto nepresnosti budú chyby v meraní vlnovej dľžky.
+
+Ak chceme pozorovať sodíkový dublet potrebujeme ekvivalentný hranol s dĺžkou základne $a = "0.13 m"$.
+
+
+\section{Záver}
+
+Z nameraných hodnôt pre ortuťovú výboju viď Tab. \ref{T_1} sme určili konštanty $n_n$, $C$ a $\lambda_n$.
+
+Pomocou týchto konštante sme z nameraných dát pre vodíkovú a sodíkovú výbojku určili spektrá.
+Nakoniec sme určili Rydbergovu konstantu konštantu pre jednotlivé farby
+\eq[m]{
+R_c &= "19.1 nm^{-1}" \,,\\
+R_m &= "14.8 nm^{-1}" \,,\\
+R_f &= "13.3 nm^{-1}" \,,\\
+} 
+a určili základňu hranolu $a = "0.13 m"$, ktorým je možné pozorovať sodíkový dublet.
+
+
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Balmerova série [cit. 27.03.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/417/mod_resource/content/5/Balmer-2016-Feb-27.pdf}
+\bibitem{C_2}
+HyperPhysics Concepts [cit. 27.03.2017]Dostupné na webe:\url{http://hyperphysics.phy-astr.gsu.edu/hbase/index.html}
+
+
+\end{thebibliography}
+
+\end{document}
+

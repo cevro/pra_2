@@ -1,0 +1,90 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+Struna, závaží 5 kg, laboratorní stojany, frekvenční generátor, generátor mechanických kmitů,
+Quinckova trubice, reproduktor, mikrofony, osciloskop, skleněná baňka, rozhraní COBRA.
+
+
+
+\section{Postup merania}
+\subsection{Stojaté vlněnie na strune}
+\begin{enumerate}
+\item Podľa Obr. 5 a Obr. 6 z [\cite{C_1}] bola zostavená aparatúra.
+\item Bola odmeraná dĺžka struny a z nej dopočítaná frekvencia prvého módu.
+\item Generátorom bola nastavená vypočítaná frekvencia a dodatočne korigovaná aby nastala rezonancia struny.
+\item Postupným zvyšovaním frekvencie boli najduté rezonančné frekvencie prvých 10 módov struny. 
+\end{enumerate}
+
+\subsection{Quinckova trubice}
+\begin{enumerate}
+\item Bola zostavená aparatúra podľa [\cite{C_1}]
+\item Do reproduktoru boli privádzané frekvencie od $2kHz$ do $6kHz$
+\item Pre jednotlivé frekvencie sa pohybovalo trubicou, pri pohybe sa hľadala poloha s minimálnou amplitúdou, tá bola zaznačená.
+\end{enumerate}
+
+\subsection{Helmholtzovy rezonátory}
+\begin{enumerate}
+\item Bola zostavená aparatúra podľa [\cite{C_1}]
+\item Do reproduktoru bola prevádzaná rezonančná frekvencia a na PC bola pozorovaná furierovská analýza signálu.
+\item Zmenami frekvencie sme sa snažili nájsť bod rezonancie
+\item Postupne bola dolievaná voda do nádoby a pre tieto objemy nájduta rezonančná frekvencia.
+\end{enumerate}
+
+\input{vysl.tex}
+
+\section{Diskusia \& Záver}
+V prvej časti sme odmerali dĺžkovú hustotu struny $\mu = "\(0.0163\pm0.0001\) kg\cdot m^{-1}"$.
+V porovnaní s tabuľkou hodnotou $"0.0162 kg\cdot m^{-1}"$ je rozdiel vrámci chyby merania. 
+Problémom tohoto merania bolo určenie frekvencie, kde sme schopný určiť frekvenciu s presnosťou $\pm1Hz$.
+
+
+V druhej časti sme sa potýkali s obdobným problémom. 
+Zo zlého natočenia mikrofónu alebo vadou trubice sa amplitúdy vĺn pri príchode nezhodovali, 
+a teda sa úplne nevyrušili, teda sme minimum sme určovali nepresne. 
+Chyba sa tu môže pohybovať okolo $10\%$. Však rýchlosť zvuku $v = "\(348.7\pm6.7\) m\cdot s^{-1}"$ nám 
+vyšla v porovnaní s predpokladanou $v = "345.6 m\cdot s^{-1}"$ vrámci chyby. 
+
+
+Najväčšie problémy sme mali pri poslednej časti, 
+kde rezonančná frekvencia nastávala vždy pri $f\sim"179.7 Hz"$, 
+teda sme nedokázali namerať skutočné rezonančné frekvencie Helmholtzového rezonátoru.
+Podozrenie a predpokladanou príčinou je, že táto frekvencia je rezonančnou frekvenciu nejakého zo zariadení aparatúry prip. celej aparatúry. 
+Z Obr. \ref{G_3} síce dostávame $f$ fitu hodnotu rýchlosti zvuku ale táto hodnota je skôr náhodnou fluktuáciu a nie rozumnou hodnotou. 
+
+Pre buducnosť je dobré si premerať rezonančné frekvencie samotnej aparatúry aby sme vedeli akým frekvenciám sa máme vyhnúť.
+
+
+
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Akustika [cit. 08.03.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/414/mod_resource/content/11/Akusitka_170210.pdf}
+
+\end{thebibliography}
+
+\end{document}
+

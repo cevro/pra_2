@@ -1,0 +1,97 @@
+\section{Výsledky merania}
+Pre výpočty boli použité nasledujúce konštanty
+\eq[m]{
+r &= "17.1\cdot10^{3} m" \,,\\
+n_1 &= 62 \,,\\
+n_2 &=400\,,\\
+S &="24.3\cdot10^{-6} m" \,,\\
+L_{12} &= "7.27 mH"\,,
+}
+
+K výpočtu balistickej konštanty sme použili namerané dáta $R="20 k\Omega"$, $s="10.35 cm"$ a $I="0.206 A"$.
+
+V tabuľke \ref{T_1} sú namerané hodnoty, pre oba smery slučky.
+
+Hodnoty sú vynesené do grafu Obr. \ref{G_1}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c | c | c |}
+\hline
+\popi{I}{mA} & \popi{s}{cm} & \popi{I^\prime}{mA} & \popi{s^\prime}{cm} &  \popi{H}{A/m} & \popi{\Delta B}{T} & \popi{H^\prime}{A/m} & \popi{\Delta B^\prime}{T} \\
+\hline
+$ 0.08  $&$  2.70 $&$ 0.08   $&$ 14.4 $&$ 43.2  $&$ 0.081 $&$ 46.2  $&$ 0.43$\\
+$ 0.09  $&$  2.00 $&$ 0.09   $&$ 14.5 $&$ 50.7  $&$ 0.060 $&$ 51.9  $&$ 0.43$\\
+$ 0.11  $&$  1.20 $&$ 0.01   $&$ 4.5  $&$ 60.5  $&$ 0.036 $&$ 5.8   $&$ 0.13$\\
+$ 0.12  $&$  1.00 $& -        &   -    &$ 69.8  $&$ 0.030 $&  -      &  -    \\
+$ 0.131 $&$  0.9  $&$ 0.141  $&$ 15.5 $&$ 75.5  $&$ 0.027 $&$ 81.4  $&$ 0.46$\\
+$ 0.156 $&$  0.6  $& -        &   -    &$ 90.0  $&$ 0.018 $&  -      &  -    \\
+$ 0.174 $&$  0.8  $&$ 0.172  $&$ 17   $&$ 100.4 $&$ 0.024 $&$ 99.3  $&$ 0.51$\\
+$ 0.195 $&$  0.2  $&$ 0.065  $&$ 13.5 $&$ 112.5 $&$ 0.006 $&$ 37.5  $&$ 0.40$\\
+$ 0.051 $&$  3    $&$ 0.051  $&$ 14.5 $&$ 29.4  $&$ 0.090 $&$ 29.4  $&$ 0.43$\\
+$ 0.031 $&$  4.4  $&$ 0.031  $&$ 13.3 $&$ 17.9  $&$ 0.13  $&$ 17.9  $&$ 0.40$\\
+$ 0.025 $&$  4.6  $&$ 0.025  $&$ 6.6  $&$ 14.4  $&$ 0.14  $&$ 14.4  $&$ 0.20$\\
+$ 0.015 $&$  4.6  $&  -       &   -    &$ 8.7   $&$ 0.14  $&  -      &  -    \\
+$ 0     $&$  4.6  $&$ 0      $&$ 3.6  $&$ 0     $&$ 0.14  $&$ 0     $&$ 0.10$\\
+$-0.031 $&$  8.4  $& -        &   -    &$ -17.9 $&$ 0.25  $&  -      &  -    \\
+$-0.038 $&$  8.5  $&$ -0.038 $&$ 2    $&$ -21.9 $&$ 0.25  $&$ -21.9 $&$ 0.06$\\
+$-0.051 $&$ 13.6  $&$ -0.051 $&$ 2    $&$ -29.4 $&$ 0.41  $&$ -29.4 $&$ 0.06$\\
+$-0.06  $&$ 14.1  $&$ -0.06  $&$ 1.1  $&$ -34.6 $&$ 0.42  $&$ -34.6 $&$ 0.03$\\
+$-0.075 $&$ 14.7  $&$ -0.074 $&$ 1.5  $&$ -43.3 $&$ 0.44  $&$ -42.7 $&$ 0.04$\\
+$-0.098 $&$ 14.8  $&$ -0.098 $&$ 1.3  $&$ -56.6 $&$ 0.44  $&$ -56.6 $&$ 0.04$\\
+$-0.121 $&$ 15.6  $& -        &  -     &$ -69.8 $&$ 0.47  $&  -      & -     \\
+$-0.143 $&$ 15.5  $& -        &  -     &$ -82.5 $&$ 0.46  $&  -      & -     \\
+$-0.173 $&$ 15.9  $& -        &  -     &$ -99.8 $&$ 0.48  $&  -      & -     \\
+$-0.198 $&$ 16.5  $&$ -0.197 $&$ 0.9  $&$-114.3 $&$ 0.49  $&$ -113.7$&$ 0.03$\\
+\hline
+\end{tabular}
+\caption{Namerané dáta prúdu $I$ a amplitúdy kyvadla $s$ a 
+z nich vypočítané pomocou \ref{R_1} a \ref{R_2} hodnoty intenzity magnetického poľa $H$ a 
+magnetická indukcie $B$ , pre kladné a záporné prúdy
+kde opačný sme je označený pomocou $~^\prime$. 
+} \label{T_1}
+\end{center}
+\end{table}
+
+
+\begin{figure}
+\input{data/graph_0.tex}
+\caption{Hysterzná slučka z nameraných dát, preložená $erf(x)$, 
+kde $H$ je intenzita magnetického poľa a $B$ je magnetická indukcia. 
+}  \label{G_1}
+\end{figure}
+
+Z nameraných dát dostávame $B_r="0.9\pm0.1 H"$ a z preloženia grafu funkciami 
+\eq[m]{
+g(x) &= \("0.22\pm0.01"\)\cdot \mathrm{erf}\(\("0.023\pm0.002"\)\cdot\(x+\("10.8\pm2.0"\)\)\)\,,\\
+f(x) &= \("0.22\pm0.01"\)\cdot \mathrm{erf}\(\("0.023\pm0.002"\)\cdot\(x+\("13.2\pm2.1"\)\)\)\,,
+}
+odkiaľ dostávame $H_k=" 12.05\pm1.2 A/m"$.
+
+Magnetické straty boli pomocou určené z grafu ako $x = "70.9 A\cdot m^{-1}\cdot T"$.
+
+
+
+%\begin{table}[h]
+%\begin{center}
+%\begin{tabular}{ | c | c |}
+%\hline
+%\popi{f}{kHz} & \popi{\mean{\Delta d_i}}{m} \\
+%\hline
+%$2$&$0.080\pm0.004$\\
+%$2.5$&$0.070\pm0.001$\\
+%$3$&$0.058\pm0.002$\\
+%$3.5$&$0.050\pm0.001$\\
+%$4$&$0.041\pm0.005$\\
+%$4.5$&$0.039\pm0.001$\\
+%$5$&$0.034\pm0.008$\\
+%$5.5$&$0.031\pm0.001$\\
+%$6$&$0.029\pm0.001$\\
+%$4.25$& $0.040\pm0.001$\\
+%\hline
+%\end{tabular}
+%\caption{Vypočítané hodnoty priemernej dĺžky vzdialenosti minim $\Delta d_i$ od frekvencie $f$
+%} \label{T_2}
+%\end{center}
+%\end{table}
+

@@ -1,0 +1,73 @@
+%\documentclass[a4paper,10pt]{article}
+\documentclass[10pt]{scrartcl}
+%\usepackage[IL2]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}  
+\usepackage{amsfonts,amsmath,amssymb,graphicx,color}
+%\usepackage[total={17cm,27cm}, top=2cm, left=2cm, includefoot]{geometry}
+%\usepackage{fancyhdr}
+\usepackage{fkssugar}
+\usepackage{hyperref}
+
+%\usepackage{caption}
+
+\input{../normalize.sty}
+\input{const.sty}
+
+\begin{document}
+
+\MakeFJFIHead{}
+
+\input{prac-ukol.tex}
+
+\input{teor.tex}
+
+
+\section{Pomôcky}
+Balistický galvanometr, 2 odporové dekády, odporový normál ($10\Omega$), toroidální cívka, vypínač,
+rezistor, 2 přepínače, 1 komutátor, digitální multimeter, stabilizovaný zdroj, normál vzájemné
+indukčnosti.
+
+
+\section{Postup merania}
+\subsection{Stojaté vlněnie na strune}
+\begin{enumerate}
+\item Podľa Obr. 3 z [\cite{C_1}] bol zostavený elektricky obvod.
+\item Príd bol nastavený na $I="2 A"$
+\item pre tento prúd bola cievka komutovaná a pozorovala sa výchylka galvanometru v závislosti na odpore $R_2$, a našiel sa taký najmenší odpor, pre ktorý ostala výchyľka ešte na stupnic.
+\item Cievka bola prekomutovaná rýchlo 5krát, vypnutím prepínača V1, bola zapojená do obvodu dekáda R2 a na nej navolený odpor, ktorý v obvode spôsobil pokles prúdu, následne bol vypínač zapnutý cievka opäť prekomutovaná, následne sa pripojil do obvodu pomocou prepínaču P galvanometer a vypínač V2 bol vypnutý. Výchylka galvanometru bol zaznamenaná.
+\item Do obvodu bol pripojený namiesto toroidu indukčný normál a bola nameraná výchylka galvanometru pri komutovaní v závislosti na prúde.
+\end{enumerate}
+
+
+\input{vysl.tex}
+
+\section{Diskusia}
+
+Jedným zo zdrojov chýb merania je nepresnosť určovania polohy na balistickom galvanometri, 
+ten sa pri zapojení do obvodu často vychýlil, a nezaujal nulovú polohu. 
+Táto počiatočná výchylka je v ráde $"1 cm"$.
+Hodnota remanencie bola určená z tabuľky teda je pomerne presná.
+Však hodnotu koercitívnej sily sme určili z fitu dát. 
+Tu bola použitá $\mathrm{erf\(x\)}$, ktorá nejak nezapadá do modelu, 
+ale tvarom krivky najlepšie popisovala dáta v nultom priblížení, 
+polynómy vyšších rádov neboli moc dobre použiteľné keďže krivku neopisovali dobre v krajných bodoch.
+
+Magnetické pole zeme podľa mňa nemohlo tento experiment ovplyvniť, pretože na podmienkach experimentu ho môžeme považovať za homogénne.
+
+\section{Záver}
+Hodnota remanencie bola určená ako $B_r="0.9\pm0.1 H"$.
+Koercitívna sila bola určená na $B_r="0.9\pm0.1 H"$.
+
+A hystérzna krivka bola vykreslená do grafu Obr. \ref{G_1}
+
+
+\begin{thebibliography}{2}
+\bibitem{C_1}
+Měření hysterezní smyčky balistickým galvanometrem [cit. 13.03.2017]Dostupné po prihlásení z Kurz: Fyzikální praktikum II:\url{https://praktikum.fjfi.cvut.cz/pluginfile.php/415/mod_resource/content/8/Hystereze_170220.pdf}
+
+\end{thebibliography}
+
+\end{document}
+
